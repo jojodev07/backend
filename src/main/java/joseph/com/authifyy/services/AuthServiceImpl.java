@@ -114,7 +114,7 @@ public class AuthServiceImpl implements AuthService {
                 .path("/")
                 .httpOnly(true)
                 .secure(true)
-                .sameSite("Strict")
+                .sameSite("None")
                 .maxAge(jwtService.getExpiration2())
                 .build();
 

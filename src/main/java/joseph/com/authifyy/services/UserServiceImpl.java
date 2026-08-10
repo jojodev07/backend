@@ -114,7 +114,7 @@ public class UserServiceImpl implements UserService {
                 .path("/")
                 .httpOnly(true)
                 .secure(true)
-                .sameSite("Strict")
+                .sameSite("None")
                 .maxAge(jwtService.getExpiration2())
                 .build();
 
