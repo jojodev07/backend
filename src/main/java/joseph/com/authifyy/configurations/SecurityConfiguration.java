@@ -87,7 +87,7 @@ public class SecurityConfiguration {
                                             .path("/")
                                             .httpOnly(true)
                                             .secure(true)
-                                            .sameSite("Strict") // This must match exactly!
+                                            .sameSite("None") // This must match exactly!
                                             .maxAge(0)          // 0 seconds forces the browser to delete it immediately
                                             .build();
 
