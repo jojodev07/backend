@@ -49,7 +49,7 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
                 .maxAge(jwtService.getExpiration2())
                 .build();
         response.addHeader(HttpHeaders.SET_COOKIE, responseCookie.toString());
-        getRedirectStrategy().sendRedirect(request, response, "http://localhost:5173/");
+        getRedirectStrategy().sendRedirect(request, response, "https://teachassist-delta.vercel.app/");
 
     }
 }
