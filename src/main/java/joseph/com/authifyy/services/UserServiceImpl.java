@@ -115,7 +115,7 @@ public class UserServiceImpl implements UserService {
                 .httpOnly(true)
                 .secure(true)
                 .sameSite("None")
-                .maxAge(jwtService.getExpiration2())
+                .maxAge(jwtService.getExpiration2()/1000)
                 .build();
 
         return Optional.of(cookie);
