@@ -56,7 +56,7 @@ public class SecurityConfiguration {
                         cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(a ->
-                        a.requestMatchers("/auth/**" , "/error", "/oauth2/login","/favicon.ico, /hello").permitAll()
+                        a.requestMatchers("/auth/**" , "/error", "/oauth2/login","/favicon.ico", "/hello").permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement((session) -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
