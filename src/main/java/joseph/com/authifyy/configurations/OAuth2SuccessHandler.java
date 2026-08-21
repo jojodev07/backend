@@ -45,8 +45,8 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
                 .path("/")
                 .httpOnly(true)
                 .secure(true)
-                .sameSite("None")
-                .maxAge(jwtService.getExpiration2())
+                .sameSite("Lax")
+                .maxAge(jwtService.getExpiration2()/1000)
                 .build();
         response.addHeader(HttpHeaders.SET_COOKIE, responseCookie.toString());
         getRedirectStrategy().sendRedirect(request, response, "https://teachassist-delta.vercel.app/");
